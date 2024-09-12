@@ -1,3 +1,5 @@
+using HMSApplication.Data;
+
 namespace HMSApplication
 {
     internal static class Program
@@ -11,6 +13,13 @@ namespace HMSApplication
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            //initializing the database
+            DatabaseConnection db = new DatabaseConnection();
+            db.InitializeDatabase();
+
+
+
             Application.Run(new Form1());
         }
     }

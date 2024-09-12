@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace HMSApplication.Model
 {
-    internal class Appointment
+    public class Appointment
     {
+        public int AppointmentId { get; set; }
+        public int PatientId { get; set; }
+        public int DoctorId { get; set; }
+        public string Status { get; set; }
+        public DateTime AppointmentDate { get; set; }
     }
 }
